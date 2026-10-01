@@ -1,0 +1,30 @@
+NEXUS EVENT — QUICK SETUP
+
+[ ] Firebase Authentication -> Anonymous enabled
+[ ] Firestore created (Production mode)
+[ ] firestore.rules published
+[ ] Firestore index created/deployed
+[ ] GitHub repo created
+[ ] Project pushed to GitHub
+[ ] Netlify project connected
+[ ] FIREBASE_PROJECT_ID set in Netlify
+[ ] FIREBASE_CLIENT_EMAIL set in Netlify
+[ ] FIREBASE_PRIVATE_KEY set in Netlify
+[ ] TELEGRAM_BOT_TOKEN set in Netlify
+[ ] TELEGRAM_BOT_USERNAME=NexusEvent_Bot
+[ ] TELEGRAM_WEBHOOK_SECRET set in Netlify
+[ ] CRON_SECRET set in Netlify
+[ ] SITE_URL set to final Netlify URL
+[ ] Redeploy after env variables
+[ ] telegram-set-webhook called once
+[ ] Open site on two different browsers/devices
+[ ] Create both profiles
+[ ] Connect both to @NexusEvent_Bot
+[ ] Add friend
+[ ] Create event
+[ ] Invite friend
+[ ] Telegram invite arrives
+[ ] Press Going in Telegram
+[ ] Website updates participant status
+[ ] Event chat works in realtime
+[ ] Test reminder worker
