@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="uz" data-theme="nexus-dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0a1020">
+  <title>NEXUS EVENT</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/themes.css">
+  <link rel="manifest" href="/manifest.webmanifest">
+</head>
+<body>
+  <div id="toast-root"></div>
+  <div id="app-loader" class="screen-center"><div class="logo-mark">N</div><div><b>NEXUS EVENT</b><small>Yuklanmoqda...</small></div></div>
+
+  <div id="onboarding" class="screen-center hidden">
+    <form id="onboarding-form" class="panel auth-card">
+      <div class="logo-mark large">N</div>
+      <h1>NEXUS EVENT</h1>
+      <p>Do‘stlaringiz bilan event yarating, rejalang va Telegram orqali eslatmalar oling.</p>
+      <label>Ism<input name="firstName" maxlength="40" required placeholder="Abdumalik"></label>
+      <label>Familiya<input name="lastName" maxlength="50" required placeholder="Familiya"></label>
+      <label>Nickname<input name="nickname" maxlength="30" required placeholder="abduyx"></label>
+      <button class="btn primary" type="submit">Boshlash</button>
+      <div class="form-error" id="onboarding-error"></div>
+    </form>
+  </div>
+
+  <div id="shell" class="app-shell hidden">
+    <aside class="sidebar">
+      <div class="brand"><div class="logo-mark">N</div><span>NEXUS <b>EVENT</b></span></div>
+      <nav id="main-nav">
+        <button data-view="home" class="active">⌂ <span>Home</span></button>
+        <button data-view="events">◫ <span>Eventlar</span></button>
+        <button data-view="calendar">▦ <span>Calendar</span></button>
+        <button data-view="friends">◎ <span>Do‘stlar</span></button>
+        <button data-view="notifications">◉ <span>Bildirishnomalar</span><i id="notif-badge" class="badge hidden">0</i></button>
+        <button data-view="profile">◇ <span>Profile</span></button>
+        <button data-view="settings">⚙ <span>Settings</span></button>
+      </nav>
+      <button id="create-event-side" class="btn primary wide">＋ Event yaratish</button>
+      <div class="user-mini" id="user-mini"></div>
+    </aside>
+
+    <main>
+      <header class="topbar">
+        <div>
+          <h2 id="view-title">Home</h2>
+          <p id="view-subtitle">Bugungi rejalaringiz</p>
+        </div>
+        <div class="top-actions">
+          <button id="theme-quick" class="icon-btn" title="Theme">◐</button>
+          <button id="create-event-top" class="btn primary">＋ Event</button>
+        </div>
+      </header>
+      <section id="view" class="view"></section>
+    </main>
+
+    <nav class="bottom-nav">
+      <button data-view="home" class="active">⌂<span>Home</span></button>
+      <button data-view="events">◫<span>Events</span></button>
+      <button id="create-event-mobile" class="create-round">＋</button>
+      <button data-view="friends">◎<span>Friends</span></button>
+      <button data-view="profile">◇<span>Profile</span></button>
+    </nav>
+  </div>
+
+  <dialog id="event-dialog" class="dialog">
+    <form id="event-form" method="dialog" class="dialog-card form-grid">
+      <header><div><h3>Yangi event</h3><p>Bir daqiqada reja tuzing.</p></div><button type="button" class="icon-btn close-dialog">×</button></header>
+      <label class="full">Event nomi<input name="title" required maxlength="100" placeholder="Masalan: Futbol"></label>
+      <label>Kategoriya<select name="category"><option value="football">⚽ Futbol</option><option value="gaming">🎮 Gaming</option><option value="birthday">🎂 Tug‘ilgan kun</option><option value="cinema">🎬 Kino</option><option value="trip">🚗 Sayohat</option><option value="food">🍔 Ovqat</option><option value="study">📚 Study</option><option value="tournament">🏆 Turnir</option><option value="meeting">👥 Uchrashuv</option><option value="party">🎉 Party</option><option value="other">➕ Boshqa</option></select></label>
+      <label>Max qatnashchi<input name="maxParticipants" type="number" min="0" max="500" value="0"><small>0 = cheklanmagan</small></label>
+      <label>Sana<input name="date" type="date" required></label>
+      <label>Vaqt<input name="time" type="time" required></label>
+      <label>Joy<input name="locationName" maxlength="120" placeholder="Stadion"></label>
+      <label>Narx (UZS)<input name="cost" type="number" min="0" step="1000" value="0"></label>
+      <label>Privacy<select name="visibility"><option value="private">Private</option><option value="friends">Friends</option><option value="public">Public</option></select></label>
+      <label class="full">Tavsif<textarea name="description" rows="4" maxlength="2000" placeholder="Event haqida..."></textarea></label>
+      <footer class="full"><button type="button" class="btn ghost close-dialog">Bekor qilish</button><button type="submit" class="btn primary">Event yaratish</button></footer>
+      <div id="event-form-error" class="form-error full"></div>
+    </form>
+  </dialog>
+
+  <dialog id="generic-dialog" class="dialog"><div id="generic-dialog-body" class="dialog-card"></div></dialog>
+
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name":"NEXUS EVENT",
+  "short_name":"NEXUS Event",
+  "start_url":"/",
+  "display":"standalone",
+  "background_color":"#08101f",
+  "theme_color":"#0a1020",
+  "icons":[]
+}

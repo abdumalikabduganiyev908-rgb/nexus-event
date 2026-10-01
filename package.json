@@ -1,0 +1,16 @@
+{
+  "name": "nexus-event",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "netlify dev",
+    "check": "node --check netlify/functions/api.js && node --check netlify/functions/telegram-webhook.js && node --check netlify/functions/reminder-worker.js"
+  },
+  "dependencies": {
+    "firebase-admin": "^13.4.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^23.5.0"
+  }
+}
